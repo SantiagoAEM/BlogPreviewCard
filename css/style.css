@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root{
+    --clr-yellow: hsl(47, 88%, 63%);
+    --clr-Gray-950: hsl(0, 0%, 7%);
+    --clr-Gray-500: hsl(0, 0%, 42%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --ff-primary: "Figtree", sans-serif;
+    --fs-text1: 1.5rem; /*24px*/
+    --fs-text2: 1rem; /*16px*/
+    --fs-text3: 0.875rem; /*14px*/
+        
+    --fw-extraBold: 950;
+    --fw-medium: 500;
+}
+
+
+/* -------  reset css ------- */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+html,
+body {
+  height: 100%;
+}
+/* -------  end reset css ------- */
+
+
+/*  Utility classes  */
+
+.bg-primary {
+    background-color: var(--clr-yellow);
+}
+.bg-secondary{
+    background-color: var(--clr-white);
+}
+.text-preset3{
+  font-size: var(--fs-text3);
+  font-weight: var(--fw-extraBold);
+  color: var(--clr-Gray-950);
+}
+.disFlexCenter{      
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+ }
+.gridRow{
+  display: grid;
+  grid-template-rows:auto;
+}
+
+/*  General style  */
+body{
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-text2);
+    color: var(--clr-Gray-500);
+    line-height: 150%;
+}
+.container{
+  --max-width: 1440px;
+  --padding: 1rem;
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+}
+.card{
+    max-width: 384px;
+    max-height: 522px;
+    height:100vh;
+    border-radius: 20px;
+    justify-items: center;
+    border: 1px solid var(--clr-Gray-500);
+    box-shadow:  8px 8px var(--clr-Gray-950);
+}
+.card__img{ 
+    margin: 24px;
+    border-radius: 10px;
+}
+.card__textBox{
+    margin: 0 24px 0 24px;
+    gap: 12px;
+}
+  .card__label{ 
+    background-color: var(--clr-yellow);
+    max-width: 82px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 4px 12px 4px 12px;
+}
+  .card__date{ 
+    font-size: var(--fs-text3);
+    font-weight: var(--fw-medium);
+    color: var(--clr-Gray-950);
+}
+  .card__title{
+    font-size: var(--fs-text1);
+    font-weight: var(--fw-extraBold);
+    color: var(--clr-Gray-950);
+}
+   .card__title:hover{
+    color: var(--clr-yellow);
+    cursor: pointer;
+}
+  .card__footer{ 
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 24px;
+}
+  .card__avatar{
+    max-width: 32px;
+    aspect-ratio: 1;
+    margin-left:24px ;
+}
+  .card__author{ 
+    margin-left:5.5px ;
+}
+
+    @media ( width < 375px ) {
+      .card {
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+  }
